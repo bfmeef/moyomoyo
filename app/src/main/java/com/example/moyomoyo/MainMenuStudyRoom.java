@@ -10,8 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.moyomoyo.studyroom.StudyRoomDTO;
-import com.example.moyomoyo.studyroom.StudyRoomListAdapter;
+import com.example.moyomoyo.studyrooms.StudyRoomDTO;
+import com.example.moyomoyo.studyrooms.StudyRoomListAdapter;
 
 import java.util.ArrayList;
 
