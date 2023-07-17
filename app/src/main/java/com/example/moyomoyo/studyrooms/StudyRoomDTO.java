@@ -1,4 +1,4 @@
-package com.example.moyomoyo.studyroom;
+package com.example.moyomoyo.studyrooms;
 
 public class StudyRoomDTO {
     private String studyRoomId;
