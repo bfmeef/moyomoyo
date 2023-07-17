@@ -28,10 +28,9 @@
 
             <!-- QR 코드 스캔 버튼 -->
             <ImageButton
-                android:id="@+id/iBtnQrScanner"
+                android:id="@+id/i_btn_qr_scanner"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_margin="5dp"
                 android:padding="5dp"
                 android:backgroundTint="#00FFFFFF"
                 android:src="@drawable/qrscan"
@@ -39,10 +38,9 @@
                 android:scaleType="fitCenter"/>
 
             <ImageButton
-                android:id="@+id/iBtnProfile"
+                android:id="@+id/i_btn_profile"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_margin="5dp"
                 android:padding="5dp"
                 android:backgroundTint="#00FFFFFF"
                 android:src="@drawable/ic_baseline_face_24"

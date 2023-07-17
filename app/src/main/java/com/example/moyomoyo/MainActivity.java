@@ -7,7 +7,9 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
+//import com.example.moyomoyo.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -17,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     private MainMenuHome fragmentHome = new MainMenuHome();
     private MainMenuStudyRoom fragmentStudyRoom = new MainMenuStudyRoom();
     private MainMenuGroup fragmentGroup = new MainMenuGroup();
+
+//    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,27 @@ public class MainActivity extends AppCompatActivity {
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.menu_bottom_navigation);
         bottomNavigationView.setOnItemSelectedListener(new ItemSelectedListener());
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+
+//        // QR 코드 스캔 버튼
+//        binding.iBtnQrScanner.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View view){
+//
+//            }
+//        });
+//
+//        // 프로필 버튼
+//        binding.iBtnProfile.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View view){
+//
+//            }
+//        });
     }
 
     class ItemSelectedListener implements NavigationBarView.OnItemSelectedListener {

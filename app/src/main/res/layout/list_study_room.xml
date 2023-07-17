@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    android:id="@+id/list_study_room">
+    
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_study_room_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:text="스터디룸 이름"
+            android:textSize="18sp"/>
+
+        <TableRow>
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:textSize="13sp"
+                android:text="관리자"/>
+
+            <TextView
+                android:id="@+id/tv_study_room_manager"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="13sp"
+                android:text="이름"/>
+
+            <TextView
+                android:id="@+id/tv_study_room_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:textSize="13sp"
+                android:text="관리자 연락처"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tv_study_room_location"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="13sp"
+                android:text="스터디룸 위치"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tv_study_room_info"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="13sp"
+                android:text="스터디룸 정보"/>
+
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tv_study_room_capacity"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="13sp"
+                android:text="수용 가능 인원"/>
+
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>
