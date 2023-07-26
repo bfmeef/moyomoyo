@@ -2,6 +2,8 @@ import uuid
 
 from django.db import models
 
+from accounts.models import User
+
 
 class Group(models.Model):
     group_id = models.UUIDField(primary_key=True,
@@ -16,7 +18,7 @@ class Group(models.Model):
 
 class Member(models.Model):
     group_id = models.ForeignKey(Group, on_delete=models.CASCADE)
-    user_id = models.ForeignKey()
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     is_leader = models.BooleanField(default=False)
 
 
@@ -25,7 +27,7 @@ class Post(models.Model):
                                default=uuid.uuid4,
                                unique=True,
                                editable=False)
-    user_id = models.ForeignKey()
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     group_id = models.ForeignKey(Group, on_delete=models.CASCADE)
     title = models.CharField(max_length=20)
     content = models.CharField(max_length=500)
@@ -39,7 +41,6 @@ class Comment(models.Model):
                                   unique=True,
                                   editable=False)
     post_id = models.ForeignKey(Post, on_delete=models.CASCADE)
-    user_id = models.ForeignKey()
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.CharField(max_length=500)
     create_date = models.DateTimeField(auto_now_add=True, editable=False)
-    

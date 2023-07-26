@@ -53,6 +53,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'moyomoyo.urls'
+AUTH_USER_MODEL = 'accounts.User'
 
 TEMPLATES = [
     {

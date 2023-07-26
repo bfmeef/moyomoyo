@@ -2,6 +2,9 @@ import uuid
 
 from django.db import models
 
+from accounts.models import User
+
+
 class StudyRoom(models.Model):
     study_room_id = models.UUIDField(primary_key=True,
                                      default=uuid.uuid4,
@@ -32,6 +35,6 @@ class Participant(models.Model):
                                       unique=True,
                                       editable=False)
     reservation_id = models.ForeignKey(Reservation, on_delete=models.CASCADE)
-    user_id = models.ForeignKey()
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     study_room_id = models.ForeignKey(StudyRoom, on_delete=models.CASCADE)
     is_leader = models.BooleanField(default=False)
